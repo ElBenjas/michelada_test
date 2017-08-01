@@ -1,0 +1,13 @@
+<%= form_for @brand do |b| %>
+
+  <div class="form-group">
+    <%= b.label :name, for: "name" %>
+    <%= b.text_field :name, id:"name", class: "form-control",
+                            placeholder: "New brand"%>
+  </div>
+
+  <P>
+    <%= b.submit "Save", class:"btn btn-default"%>
+  </P>
+
+<% end %>
