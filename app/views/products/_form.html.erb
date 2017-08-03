@@ -1,31 +1,36 @@
 <%= form_for @product do |p| %>
 
-  <div class="form-group">
-    <%= p.label :name, for: "name" %>
-    <%= p.text_field :name, id:"name", class: "form-control",
-                            placeholder: "Name"%>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <%= p.label :name, for: "name" %>
+      <%= p.text_field :name, id:"name", class: "form-control",
+                              placeholder: "Name"%>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= p.label :brand, for: "brand" %>
+      <%= p.text_field :brand, id:"brand", class: "form-control",
+                              placeholder: "Brand"%>
+    </div>
   </div>
 
-  <div class="form-group">
-    <%= p.label :brand, for: "brand" %>
-    <%= p.text_field :brand, id:"brand", class: "form-control",
-                            placeholder: "Brand"%>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <%= p.label :descriptions, for: "description" %>
+      <%= p.text_area :name, id:"description", class: "form-control",
+                              placeholder: "Description"%>
+    </div>
   </div>
 
-  <div class="form-group">
-    <%= p.label :descriptions, for: "description" %>
-    <%= p.text_area :name, id:"description", class: "form-control",
-                            placeholder: "Description"%>
-  </div>
 
-  <div class="form-group">
-    <%= p.label :price, for: "price" %>
-    <%= p.text_field :price, id:"price", class: "form-control",
-                            placeholder: "Price"%>
-  </div>
+    <div class="form-group">
+      <%= p.label :price, for: "price" %>
+      <%= p.text_field :price, id:"price", class: "form-control",
+                              placeholder: "Price"%>
+    </div>
 
-  <P>
-    <%= p.submit "Save", class:"btn btn-default"%>
-  </P>
+    <P>
+      <%= p.submit "Save", class:"btn btn-default"%>
+    </P>
 
 <% end %>

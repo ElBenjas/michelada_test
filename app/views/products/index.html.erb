@@ -1,10 +1,16 @@
-<h1>Products list</h1>
-
-<div>
-  <% @products.each do |p| %>
-    <%= p.name %><br />
-    <%= p.brand %><br />
-    <%= p.description %><br />
-    <%= p.price %><br />
-  <% end %>
+<div class="row">
+  <div>
+    <h1 class="text-title" >Products list</h1>
+    <%= link_to "Add Product", new_product_path %>
+  </div>
+  <div>
+    <% @products.each do |p| %>
+      <hr>
+      <u class="text-uppercase"><%= link_to p.name, p%></u><br>
+      <%= p.brand %><br />
+      <%= p.description %><br />
+      <%= p.price %><br />
+      <br>
+    <% end %>
+  </div>
 </div>

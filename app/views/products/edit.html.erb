@@ -1,2 +1,11 @@
-<h1>Editing <%= @product.name %></h1>
-<%= render 'form' %>
+<div class="row">
+  <div>
+    <h1>Editing <%= @product.name %></h1>
+    <%= link_to 'Back', product_path %>
+    <hr>
+  </div>
+
+  <div>
+    <%= render 'form' %>
+  </div>
+</div>

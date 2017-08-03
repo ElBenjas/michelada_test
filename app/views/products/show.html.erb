@@ -1,8 +1,17 @@
-<h1>Product <%= @product.name %></h1>
+<div class="row">
+  <div class="margin-bottom">
+    <h1>Product "<%= @product.name %>"</h1>
+    <%= link_to 'Products list', products_path %> | <%= link_to 'Edit', edit_product_path %> |
+    <%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure to delete this product?' }%>
+    <hr>
+  </div>
 
-<p>
-  <%= @product.name %><br />
-  <%= @product.brand %><br />
-  <%= @product.description %><br />
-  <%= @product.price %><br />
-</p>
+  <div>
+    <p>
+      <%= @product.name %><br />
+      <%= @product.brand %><br />
+      <%= @product.description %><br />
+      <%= @product.price %><br />
+    </p>
+  </div>
+</div>
