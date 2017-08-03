@@ -9,8 +9,8 @@
 
     <div class="form-group col-md-6">
       <%= p.label :brand, for: "brand" %>
-      <%= p.text_field :brand, id:"brand", class: "form-control",
-                              placeholder: "Brand"%>
+      <%= p.collection_select :brand_id, Brand.all, :id, :name, prompt: true, id:"brand" %>
+
     </div>
   </div>
 
