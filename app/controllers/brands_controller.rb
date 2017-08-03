@@ -27,15 +27,15 @@ class BrandsController < ApplicationController
 
   def update
     if @brand.update_attributes(brand_params)
-      redirect_to @post
+      redirect_to @brand
     else
       render 'edit'
     end
   end
 
   def destroy
-    @post.destroy
-    redirect_to root_path
+    @brand.destroy
+    redirect_to brands_path
   end
 
   private

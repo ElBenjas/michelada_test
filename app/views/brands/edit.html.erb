@@ -1,2 +1,11 @@
-<h1>Brand edit</h1>
-<%= render 'form' %>
+<div class="row">
+  <div>
+    <h1>Editing <%= @brand.name %></h1>
+    <%= link_to 'Back', brand_path %>
+    <hr>
+  </div>
+
+  <div>
+    <%= render 'form' %>
+  </div>
+</div>

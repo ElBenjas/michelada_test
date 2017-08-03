@@ -1,1 +1,12 @@
-<%= @brand.name %>
+<div class="row">
+  <div>
+    <h1>Brand "<%= @brand.name %>"</h1>
+    <%= link_to 'Brands list', brands_path %> | <%= link_to 'Edit', edit_brand_path %> |
+    <%= link_to 'Delete', @brand, method: :delete, data: { confirm: 'Are you sure to delete this brand?' }%>
+    <hr>
+  </div>
+
+  <div>
+    <%= @brand.name %>
+  </div>
+</div>
