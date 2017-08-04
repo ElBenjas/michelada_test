@@ -7,7 +7,7 @@
     <% @products.each do |p| %>
       <hr>
       <u class="text-uppercase"><%= link_to p.name, p%></u><br>
-      <%= p.brand %><br />
+      <%= p.brand.name %><br />
       <%= p.description %><br />
       <%= p.price %><br />
       <br>

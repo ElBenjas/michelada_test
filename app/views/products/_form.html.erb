@@ -22,7 +22,8 @@
 
     <div class="form-group col-md-6">
       <%= p.label :brand, for: "brand" %>
-      <%= p.collection_select :brand_id, Brand.all, :id, :name, prompt: true, id:"brand" %>
+      <%= p.collection_select :brand_id, Brand.all, :id, :name, {prompt: 'Please select a brand'},
+                              {class: "form-control"}%>
 
     </div>
   </div>
@@ -30,7 +31,7 @@
   <div class="row">
     <div class="form-group col-md-12">
       <%= p.label :descriptions, for: "description" %>
-      <%= p.text_area :name, id:"description", class: "form-control",
+      <%= p.text_area :description, id:"description", class: "form-control",
                               placeholder: "Description"%>
     </div>
   </div>
@@ -38,7 +39,7 @@
 
     <div class="form-group">
       <%= p.label :price, for: "price" %>
-      <%= p.text_field :price, id:"price", class: "form-control",
+      <%= p.text_field :price, step:"any", id:"price", class: "form-control",
                               placeholder: "Price"%>
     </div>
 
