@@ -1,5 +1,18 @@
 <%= form_for @brand do |b| %>
 
+  <% if @brand.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        The form contains <%= pluralize(@brand.errors.count, "error") %>.
+      </div>
+      <ul>
+      <% @brand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="row">
     <div class="form-group col-md-6">
       <%= b.label :name, for: "name" %>

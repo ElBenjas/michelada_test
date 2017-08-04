@@ -16,6 +16,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
 
     if @brand.save
+      flash[:success] = "Brand created."
       redirect_to @brand
     else
       render 'new'
