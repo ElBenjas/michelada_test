@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @total = @products.sum(&:price)
-
   end
 
   def show
